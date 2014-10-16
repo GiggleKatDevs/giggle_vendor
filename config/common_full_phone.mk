@@ -1,5 +1,5 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/bliss/config/common_full.mk)
+$(call inherit-product, vendor/gigglekat/config/common_full.mk)
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
-        vendor/bliss/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+        vendor/gigglekat/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
 endif
 
-$(call inherit-product, vendor/bliss/config/telephony.mk)
+$(call inherit-product, vendor/gigglekat/config/telephony.mk)
