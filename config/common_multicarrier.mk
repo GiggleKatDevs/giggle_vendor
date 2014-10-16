@@ -1,1 +1,1 @@
-PRODUCT_PACKAGE_OVERLAYS += vendor/bliss/overlay/multicarrier
+PRODUCT_PACKAGE_OVERLAYS += vendor/gigglekat/overlay/multicarrier
