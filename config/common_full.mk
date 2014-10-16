@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/gigglekat/config/common.mk)
 
 # Include CM audio files
-include vendor/giggleakat/config/bean_audio.mk
+include vendor/giggleakat/config/gigglekat_audio.mk
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
