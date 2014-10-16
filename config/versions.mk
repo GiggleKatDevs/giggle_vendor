@@ -34,5 +34,5 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.modversion=$(GIGGLEKAT_VERSION) \
-ro.GIGGLEKAT.version=$(VERSION)-$(GIGGLEKAT_BUILDTYPE)
+ro.gigglekat.version=$(VERSION)-$(GIGGLEKAT_BUILDTYPE)
 ro.bs=true \
