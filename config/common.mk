@@ -149,7 +149,7 @@ vendor/gigglekat/prebuilt/appsettings_v1.10.apk:system/app/appsettings.apk \
 vendor/gigglekat/prebuilt/xposed_installer_v2.7e1.apk:system/app/xposed_installer.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/FasterGPS_v1.11.apk:system/app/FasterGPS.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/gigglekat_Explorer_v3.2.apk:system/app/gigglekat_Explorer.apk \
+vendor/gigglekat/prebuilt/gigglekat_added/gigglekat_explorer_v3.2.apk:system/app/gigglekat_Explorer.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/Nova_Launcher_v3.1.apk:system/app/Nova_Launcher.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Black_v5.5.apk:system/app/Pandora_Black.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Patcher_v3.5.4.apk:system/app/Pandora_Patcher.apk \
