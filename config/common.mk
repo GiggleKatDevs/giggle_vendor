@@ -145,8 +145,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 vendor/gigglekat/proprietary/Term.apk:system/app/Term.apk \
 vendor/gigglekat/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-vendor/gigglekat/prebuilt/gigglekat_added/appsettings.apk:system/app/appsettings.apk \
-vendor/gigglekat/prebuilt/xposed_installer_v2.7e1.apk:system/app/xposed_installer.apk \
+vendor/gigglekat/prebuilt/appsettings.apk:system/app/appsettings.apk \
+vendor/gigglekat/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/FasterGPS_v1.11.apk:system/app/FasterGPS.apk \
 vendor/gigglekat/prebuilt/gigglekat_added/Nova_Launcher_v3.1.apk:system/app/Nova_Launcher.apk \
