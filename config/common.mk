@@ -1,8 +1,5 @@
 PRODUCT_BRAND ?= gigglekat
 
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
-
 # To deal with CM9 specifications
 # TODO: remove once all devices have been switched
 ifneq ($(TARGET_BOOTANIMATION_NAME),)
@@ -142,23 +139,37 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/gigglekat/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 
+# Files to build viper audio instead of DSP
+PRODUCT_COPY_FILES +=  \
+    vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
+    vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so
+    
+# SU Support
 PRODUCT_COPY_FILES += \
-vendor/gigglekat/proprietary/Term.apk:system/app/Term.apk \
-vendor/gigglekat/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-vendor/gigglekat/prebuilt/appsetting.apk:system/app/appsettings.apk \
-vendor/gigglekat/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/FasterGPS_v1.11.apk:system/app/FasterGPS.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Nova_Launcher_v3.1.apk:system/app/Nova_Launcher.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Black_v5.5.apk:system/app/Pandora_Black.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Patcher_v3.5.4.apk:system/app/Pandora_Patcher.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Titanium_Backup_v6.1.5.6.apk:system/app/Titanium_Backup.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Viper4Android_v2.3.3.0.apk:system/app/Viper4Android.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Xposed_GEL_Settings_v2.1.1.apk:system/app/Xposed_GEL_Settings.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Netflix_Fix_v1.0.apk:system/app/Xposed_Netflix_Fix.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Preference_Injector_v1.3.apk:system/app/Xposed_Preference_Injector.apk \
-vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Torch_v1.8.0.apk:system/app/Xposed_Torch.apk \
+    vendor/bliss/prebuilt/common/bin/su:system/xbin/daemonsu \
+    vendor/bliss/prebuilt/common/bin/su:system/xbin/su \
+    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/bliss/prebuilt/apps/Superuser.apk:system/app/Superuser.apk        
+
+# Copy JNI libarary of Term and apps to be added to the build
+PRODUCT_COPY_FILES += \
+    vendor/gigglekat/proprietary/Term.apk:system/app/Term.apk \
+    vendor/gigglekat/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/gigglekat/prebuilt/appsetting.apk:system/app/appsettings.apk \
+    vendor/gigglekat/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/FasterGPS_v1.11.apk:system/app/FasterGPS.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Nova_Launcher_v3.1.apk:system/app/Nova_Launcher.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Black_v5.5.apk:system/app/Pandora_Black.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Patcher_v3.5.4.apk:system/app/Pandora_Patcher.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Titanium_Backup_v6.1.5.6.apk:system/app/Titanium_Backup.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Viper4Android_v2.3.3.0.apk:system/app/Viper4Android.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Xposed_GEL_Settings_v2.1.1.apk:system/app/Xposed_GEL_Settings.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Netflix_Fix_v1.0.apk:system/app/Xposed_Netflix_Fix.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Preference_Injector_v1.3.apk:system/app/Xposed_Preference_Injector.apk \
+    vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Torch_v1.8.0.apk:system/app/Xposed_Torch.apk \
 #vendor/gigglekat/prebuilt/gigglekat_added/gigglekat_explorer_v3.2.apk:system/app/gigglekat_Explorer.apk \
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/gigglekat/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -187,9 +198,7 @@ include vendor/gigglekat/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
-    LatinIME \
-    Superuser \
-    su
+    LatinIME
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
@@ -202,7 +211,6 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Trebuchet \
-    libcyanogen-dsp \
     audio_effects.conf \
     GigglekatUpdater \
     ScreenRecorder \
