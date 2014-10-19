@@ -139,22 +139,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/gigglekat/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 
-# Files to build viper audio instead of DSP
-PRODUCT_COPY_FILES +=  \
-    vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
-    vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so
-    
-# SU Support
-PRODUCT_COPY_FILES += \
-    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/daemonsu \
-    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/su \
-    vendor/gigglekat/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/gigglekat/prebuilt/apps/Superuser.apk:system/app/Superuser.apk        
-
 # Copy JNI libarary of Term and apps to be added to the build
 PRODUCT_COPY_FILES += \
     vendor/gigglekat/proprietary/Term.apk:system/app/Term.apk \
     vendor/gigglekat/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
+    vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
     vendor/gigglekat/prebuilt/appsetting.apk:system/app/appsettings.apk \
     vendor/gigglekat/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
@@ -168,6 +158,14 @@ PRODUCT_COPY_FILES += \
     vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Preference_Injector_v1.3.apk:system/app/Xposed_Preference_Injector.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Torch_v1.8.0.apk:system/app/Xposed_Torch.apk \
 #vendor/gigglekat/prebuilt/gigglekat_added/gigglekat_explorer_v3.2.apk:system/app/gigglekat_Explorer.apk \
+
+# SU Support
+PRODUCT_COPY_FILES += \
+    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/daemonsu \
+    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/su \
+    vendor/gigglekat/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/gigglekat/prebuilt/apps/Superuser.apk:system/app/Superuser.apk   
+    
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/gigglekat/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
