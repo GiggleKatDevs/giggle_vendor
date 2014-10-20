@@ -219,6 +219,10 @@ PRODUCT_PACKAGES += \
     DashClock \
     CMHome
 
+# SuperSu    
+PRODUCT_PACKAGES += \
+    Superuser    
+
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
 
