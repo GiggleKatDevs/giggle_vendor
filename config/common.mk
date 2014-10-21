@@ -1,5 +1,8 @@
 PRODUCT_BRAND ?= gigglekat
 
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+
 # To deal with CM9 specifications
 # TODO: remove once all devices have been switched
 ifneq ($(TARGET_BOOTANIMATION_NAME),)
@@ -158,13 +161,6 @@ PRODUCT_COPY_FILES += \
     vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Preference_Injector_v1.3.apk:system/app/Xposed_Preference_Injector.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/Xposed_Torch_v1.8.0.apk:system/app/Xposed_Torch.apk \
 #vendor/gigglekat/prebuilt/gigglekat_added/gigglekat_explorer_v3.2.apk:system/app/gigglekat_Explorer.apk \
-
-# SU Support
-PRODUCT_COPY_FILES += \
-    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/daemonsu \
-    vendor/gigglekat/prebuilt/common/bin/su:system/xbin/su \
-    vendor/gigglekat/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/gigglekat/prebuilt/apps/Superuser.apk:system/app/Superuser.apk   
     
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -194,7 +190,9 @@ include vendor/gigglekat/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
-    LatinIME
+    LatinIME \
+    Superuser \
+    su
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
@@ -218,10 +216,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     DashClock \
     CMHome
-
-# SuperSu    
-PRODUCT_PACKAGES += \
-    Superuser    
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
