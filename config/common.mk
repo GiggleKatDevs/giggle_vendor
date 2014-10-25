@@ -144,8 +144,8 @@ PRODUCT_COPY_FILES += \
 
 # Copy JNI libarary of Term and apps to be added to the build
 PRODUCT_COPY_FILES += \
-    vendor/gigglekat/proprietary/Term.apk:system/app/Term.apk \
-    vendor/gigglekat/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/gigglekat/prebuilt/apps/Term.apk:system/app/Term.apk \
+    vendor/gigglekat/prebuilt/common/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
     vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
     vendor/gigglekat/prebuilt/appsetting.apk:system/app/appsettings.apk \
@@ -216,6 +216,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     DashClock \
     CMHome
+    CMFileManager \
+    CMWallpapers
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
