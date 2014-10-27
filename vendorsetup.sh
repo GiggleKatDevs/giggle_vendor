@@ -4,3 +4,5 @@ do
 done
 
 add_lunch_combo gigglekat_vs980-userdebug
+add_lunch_combo gigglekat_moto_msm8960-userdebug
+add_lunch_combo gigglekat_moto_ghost-userdebug
