@@ -144,12 +144,10 @@ PRODUCT_COPY_FILES += \
     vendor/gigglekat/prebuilt/common/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
     vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
-    vendor/gigglekat/prebuilt/common/lib/libgif.so:system/lib/libgif.so \
     vendor/gigglekat/prebuilt/appsetting.apk:system/app/appsettings.apk \
     vendor/gigglekat/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/AdAway_v2.9.2.apk:system/app/AdAway.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/FasterGPS_v1.11.apk:system/app/FasterGPS.apk \
-    vendor/gigglekat/prebuilt/gigglekat_added/Nova_Launcher_v3.1.apk:system/app/Nova_Launcher.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Black_v5.5.apk:system/app/Pandora_Black.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/Pandora_Patcher_v3.5.4.apk:system/app/Pandora_Patcher.apk \
     vendor/gigglekat/prebuilt/gigglekat_added/Titanium_Backup_v6.1.5.6.apk:system/app/Titanium_Backup.apk \
