@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     LockClock \
     DashClock \
-    CMHome
+    CMHome \
     CMFileManager \
     CMWallpapers
 
