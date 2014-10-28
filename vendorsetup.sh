@@ -11,4 +11,7 @@ add_lunch_combo gigglekat_d801-userdebug
 add_lunch_combo gigglekat_d802-userdebug
 add_lunch_combo gigglekat_m7-userdebug
 add_lunch_combo gigglekat_m8-userdebug
-
+add_lunch_combo gigglekat_d801-userdebug
+add_lunch_combo gigglekat_d800-userdebug
+add_lunch_combo gigglekat_falcon-userdebug
+add_lunch_combo gigglekat_yuga-userdebug
